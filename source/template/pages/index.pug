@@ -1,7 +1,10 @@
 extends ../_template
 
 block variables
-  - var title = 'Odinokun portfolio'
+  - var title = 'Odinokun'
 
 block content
-  include ../common/_greating
+  section.wrapper.welcome
+    include ../common/_social-icons
+    section.content
+    include ../common/_footer

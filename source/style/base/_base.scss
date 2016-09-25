@@ -1,29 +1,24 @@
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 html {
-    font-size: 16px;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
 body {
-    line-height: 1.4;
-    width: 100%;
-    min-width: 320px;
-    height: 100%;
-    color: #696969;
+  line-height: 1.4;
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+  color: #696969;
 
-    @include font-size(16px);
-    @include roboto(regular);
+  @include font-size(16px);
+  @include roboto(regular);
 }
-
-
-
-
-
 h1,
 h2,
 h3,
@@ -31,131 +26,96 @@ h4,
 h5,
 h6,
 p {
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
-h1 {
-    padding: 20px 0 5px 0;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    color: #128d50;
 
-    @include sheepsans(bold);
-    @include font-size(24px);
-    &:after {
-        display: block;
-        width: 170px;
-        height: 1px;
-        margin-bottom: 5px;
-        content: '';
-        background-color: #11a257;
-    }
+
+h1 {
+  // @include sheepsans(bold);
+  // @include font-size(24px);
 }
 h2 {
-    text-transform: uppercase;
-    color: #ff5806;
-
-    @include sheepsans(bold);
-    @include font-size(24px);
+  // @include sheepsans(bold);
+  // @include font-size(24px);
 }
 h3 {
-    text-transform: uppercase;
-    color: #106634;
-
-    @include sheepsans(bold);
-    @include font-size(22px);
+  // @include sheepsans(bold);
+  // @include font-size(22px);
 }
 h4 {
-    text-transform: uppercase;
-    color: #454545;
-
-    @include sheepsans(bold);
-    @include font-size(18px);
+  // @include sheepsans(bold);
+  // @include font-size(18px);
 }
 h5 {
-    color: #818181;
-
-    @include sheepsans(bold);
-    @include font-size(18px);
+  // @include sheepsans(bold);
+  // @include font-size(18px);
 }
 h6 {
-    color: #ff5806;
-
-    @include sheepsans(bold);
-    @include font-size(18px);
+  // @include sheepsans(bold);
+  // @include font-size(18px);
 }
 p {
-    color: #818181;
+  color: #818181;
 
-    @include opensans(regular);
-    @include font-size(14px);
-    @include line-height(20px);
-}
-ul {
-    li {
-        padding-left: 5px;
-        list-style: url('../img/ul.jpg');
-        color: #424649;
-    }
-}
-ol {
-    li {
-        color: #424649;
-    }
+  // @include opensans(regular);
+  // @include font-size(14px);
+  // @include line-height(20px);
 }
 a {
-    color: #39a444;
-    &:hover {
-        text-decoration: none;
-    }
+  color: #39a444;
+  &:hover {
+    text-decoration: none;
+  }
 }
+
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .content {
-    overflow: hidden;
+  overflow: hidden;
 
-    flex: 1;
+  flex: 1;
 }
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
 .page-header {
-    padding: 15px 0 20px 0;
-    text-align: center;
-    background: url('../img/page-header.jpg') 50% 50% no-repeat;
-    background-size: cover;
+  padding: 15px 0 20px 0;
+  text-align: center;
+  background: url('../img/page-header.jpg') 50% 50% no-repeat;
+  background-size: cover;
 }
 .page-header__title {
-    line-height: 48px;
-    text-transform: uppercase;
-    color: #128d50;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: #128d50;
 
-    @include font-size(30px);
-    @include sheepsans(bold);
+  // @include font-size(30px);
+  // @include sheepsans(bold);
 }
 .content__title {
-    padding: 20px 0 5px 0;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    color: #128d50;
+  padding: 20px 0 5px 0;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #128d50;
 
-    @include sheepsans(bold);
-    @include font-size(24px);
-    @include line-height(28px);
-    &:after {
-        display: block;
-        width: 170px;
-        height: 1px;
-        margin-bottom: 5px;
-        content: '';
-        background-color: #11a257;
-    }
+  // @include sheepsans(bold);
+  // @include font-size(24px);
+  // @include line-height(28px);
+  &:after {
+    display: block;
+    width: 170px;
+    height: 1px;
+    margin-bottom: 5px;
+    content: '';
+    background-color: #11a257;
+  }
 }
