@@ -1,24 +1,28 @@
 .social-icons__list {
   display: inline-block;
-  // display: block;
-  // width: 300px;
   margin: 0;
   padding: 0;
-  background-color: #ccc;
+  // background-color: #ccc;
+  @include clearfix;
 }
 .social-icons__item {
-  display: inline-block;
+  display: block;
   list-style: none;
-  vertical-align: middle;
+  float: left;
 }
 .social-icons__link {
+  margin: 0 11px;
   display: block;
   width: 30px;
   height: 30px;
-  margin: 0 12px;
+  &:hover {
+    svg {
+    fill: $brand;
+    }
+  }
   svg {
     width: 100%;
     height: 100%;
-    fill: $brand;
+      fill: $brand-dark;
   }
 }
