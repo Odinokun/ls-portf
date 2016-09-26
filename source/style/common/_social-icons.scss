@@ -2,7 +2,6 @@
   display: inline-block;
   margin: 0;
   padding: 0;
-  // background-color: #ccc;
   @include clearfix;
 }
 .social-icons__item {
@@ -11,10 +10,10 @@
   float: left;
 }
 .social-icons__link {
-  margin: 0 11px;
+  margin: 0 13px;
   display: block;
   width: 30px;
-  height: 30px;
+  height: 25px;
   &:hover {
     svg {
     fill: $brand;

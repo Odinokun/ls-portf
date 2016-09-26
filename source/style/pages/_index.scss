@@ -2,3 +2,14 @@
   background: #223b65 url('../img/bg-welcome.png') 50% 100% no-repeat;
   background-size: contain;
 }
+.welcome-banner {
+  background-color: rgba(28,31,41,.5);
+  width: 380px;
+  min-height: 395px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px 10px;
+  text-align: center;
+}

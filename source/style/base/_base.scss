@@ -32,42 +32,21 @@ p {
 }
 
 
-h1 {
-  // @include sheepsans(bold);
-  // @include font-size(24px);
-}
-h2 {
-  // @include sheepsans(bold);
-  // @include font-size(24px);
-}
-h3 {
-  // @include sheepsans(bold);
-  // @include font-size(22px);
-}
-h4 {
-  // @include sheepsans(bold);
-  // @include font-size(18px);
-}
-h5 {
-  // @include sheepsans(bold);
-  // @include font-size(18px);
-}
-h6 {
-  // @include sheepsans(bold);
-  // @include font-size(18px);
+h1, h2, h3, h4, h5, h6 {
+  @include roboto(bold);
 }
 p {
   color: #818181;
 
-  // @include opensans(regular);
-  // @include font-size(14px);
-  // @include line-height(20px);
+  @include roboto(regular);
 }
 a {
-  color: #39a444;
-  &:hover {
-    text-decoration: none;
-  }
+  color: $brand-dark;
+  &:hover,
+  &:focus {
+  color: $brand;
+  text-decoration: none;
+}
 }
 
 .wrapper {
@@ -81,41 +60,8 @@ a {
   flex: 1;
 }
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 30px;
-}
-
-.page-header {
-  padding: 15px 0 20px 0;
-  text-align: center;
-  background: url('../img/page-header.jpg') 50% 50% no-repeat;
-  background-size: cover;
-}
-.page-header__title {
-  line-height: 48px;
-  text-transform: uppercase;
-  color: #128d50;
-
-  // @include font-size(30px);
-  // @include sheepsans(bold);
-}
-.content__title {
-  padding: 20px 0 5px 0;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  color: #128d50;
-
-  // @include sheepsans(bold);
-  // @include font-size(24px);
-  // @include line-height(28px);
-  &:after {
-    display: block;
-    width: 170px;
-    height: 1px;
-    margin-bottom: 5px;
-    content: '';
-    background-color: #11a257;
-  }
+  // width: 100%;
+  // max-width: 1200px;
+  // margin: 0 auto;
+  // padding: 0 30px;
 }

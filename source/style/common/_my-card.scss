@@ -1,0 +1,33 @@
+.my-card {
+  text-align: center;
+  &__img {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin-bottom: 6px;
+    img {
+      position: absolute;
+      top: -0;
+      left: -50px;
+      width: 200%;
+    }
+  }
+  &__signature {
+    margin-bottom: 35px;
+  }
+  &__title {
+    color: $t-light;
+    @include font-size(28px);
+
+    @include roboto(medium);
+  }
+  &__subtitle {
+    @include font-size(16px);
+    color: $t-light;
+
+    @include roboto(regular);
+  }
+}
