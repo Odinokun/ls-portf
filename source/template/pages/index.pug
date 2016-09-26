@@ -5,7 +5,9 @@ block variables
 
 block content
   section.wrapper.welcome
-    section.content
+    div.content
+      section.container
+        button.welcome-btn Авторизоваться
       div.welcome-banner
         include ../common/_my-card
         include ../common/_social-icons
@@ -16,6 +18,5 @@ block content
             a(href="#").welcome-banner__link Обо мне
           li.welcome-banner__item.welcome-banner__item--blog
             a(href="#").welcome-banner__link Блог
-
 
     include ../common/_footer

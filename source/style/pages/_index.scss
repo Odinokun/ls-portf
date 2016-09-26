@@ -2,28 +2,50 @@
   background: #223b65 url('../img/bg-welcome.png') 50% 100% no-repeat;
   background-size: contain;
 }
+.welcome-btn {
+  position: absolute;
+  top: 25px;
+  right: 100px;
+  padding: 10px 27px;
+  transition: all .5s;
+  color: $t-light;
+  border: 1px solid #fff;
+  background: transparent;
+
+  @include roboto(medium);
+  @include font-size(16px);
+  &:hover {
+    transition: all .5s;
+    color: $brand;
+    background-color: #fff;
+  }
+}
 .welcome-banner {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
   min-height: 395px;
-  padding: 40px 10px;
+  padding: 40px 10px 50px 10px;
   transform: translate(-50%, -50%);
   text-align: center;
   background-color: rgba(28,31,41,.5);
   &__list {
-    margin: 0;
-    padding: 0;
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
+    margin: 0;
+    padding: 0;
+
+    @include clearfix;
   }
   &__item {
-    // display: inline-block;
+    position: relative;
     float: left;
     list-style: none;
+    transition: all .5s;
     background-color: $brand;
     &--work {
       width: 41%;
@@ -36,22 +58,21 @@
     &--blog {
       width: 25%;
     }
-
     &:hover {
-
-    background-color: $brand-dark;
+      transition: all .5s;
+      background-color: $brand-dark;
     }
   }
   &__link {
+    display: block;
+    padding: 10px 5px;
     text-decoration: none;
     color: $t-light;
+
     @include roboto(medium);
     @include font-size(16px);
-    padding: 10px 5px;
-    display: block;
     &:hover {
-    color: $t-light;
-
+      color: $t-light;
     }
   }
 }
