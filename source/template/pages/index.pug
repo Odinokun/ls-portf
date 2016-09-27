@@ -5,18 +5,45 @@ block variables
 
 block content
   section.wrapper.welcome
-    div.content
-      section.container
-        button.welcome-btn Авторизоваться
-      div.welcome-banner
-        include ../common/_my-card
-        include ../common/_social-icons
-        ul.welcome-banner__list
-          li.welcome-banner__item.welcome-banner__item--work
-            a(href="#").welcome-banner__link Мои работы
-          li.welcome-banner__item.welcome-banner__item--about
-            a(href="#").welcome-banner__link Обо мне
-          li.welcome-banner__item.welcome-banner__item--blog
-            a(href="#").welcome-banner__link Блог
+    section.container.welcome-container
+      button.welcome-btn Авторизоваться
 
-    include ../common/_footer
+      div.welcome-banner__wrap
+        div.welcome-banner
+          include ../common/_my-card
+          include ../common/_social-icons
+          ul.welcome-banner__list
+            li.welcome-banner__item.welcome-banner__item--work
+              a(href="#").welcome-banner__link Мои работы
+            li.welcome-banner__item.welcome-banner__item--about
+              a(href="#").welcome-banner__link Обо мне
+            li.welcome-banner__item.welcome-banner__item--blog
+              a(href="#").welcome-banner__link Блог
+        div.welcome-banner-form
+          h2.welcome-banner-form__title Авторизируйтесь
+          form(action="")
+            fieldset.welcome-banner-form__fieldset
+              input(type="text")
+              input(type="password")
+            label Я человек
+              input(type="checkbox")
+            fieldset.welcome-banner-form__fieldset.checkbox
+              legend Вы точно не робот?
+                label Да
+                  input(type="radio")
+                label Не уверен
+                  input(type="radio")
+          ul.welcome-banner-form__list
+            li.welcome-banner-form__item
+              a(href="#").welcome-banner-form__link На главную
+            li.welcome-banner-form__item
+              a(href="#").welcome-banner-form__link Войти
+
+
+
+
+    footer.welcome-footer
+      div.copyright
+        span &#169; Дмитрий Гордиенко
+        span создано с любовью в LoftSchool
+        span 2016

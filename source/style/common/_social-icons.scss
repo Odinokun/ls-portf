@@ -11,6 +11,7 @@
   list-style: none;
 }
 .social-icons__link {
+  font-size: 0;
   display: block;
   width: 30px;
   height: 25px;
@@ -20,6 +21,14 @@
       transition: all .5s;
 
       fill: $brand;
+    }
+  }
+  &:focus {
+      outline: none;
+    svg {
+      transition: all .5s;
+
+      fill: #fff;
     }
   }
   svg {

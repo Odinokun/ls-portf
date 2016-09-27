@@ -1,12 +1,21 @@
 .welcome {
+  display: flex;
   background: #223b65 url('../img/bg-welcome.png') 50% 100% no-repeat;
   background-size: contain;
+}
+.welcome-container {
+  display: flex;
+
+  perspective: 600px;
+  align-items: center;
+  justify-content: center;
 }
 .welcome-btn {
   position: absolute;
   top: 25px;
   right: 100px;
   padding: 10px 27px;
+  cursor: pointer;
   transition: all .5s;
   color: $t-light;
   border: 1px solid #fff;
@@ -20,23 +29,27 @@
     background-color: #fff;
   }
 }
-.welcome-banner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.welcome-banner__wrap {
+  position: relative;
   width: 100%;
   max-width: 380px;
-  min-height: 395px;
-  padding: 40px 10px 50px 10px;
-  transform: translate(-50%, -50%);
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  &.active {
+    transition: transform 2s;
+    transform: rotateY( 180deg );
+  }
+}
+.welcome-banner {
+  margin: auto;
+  padding: 40px 10px 0 10px;
+  transform: rotateY( 0deg );
   text-align: center;
   background-color: rgba(28,31,41,.5);
+
+  backface-visibility: hidden; //скрывает контент оборота
   &__list {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: 0;
+    margin: 35px -10px 0 -10px;
     padding: 0;
 
     @include clearfix;
@@ -73,6 +86,120 @@
     @include font-size(16px);
     &:hover {
       color: $t-light;
+    }
+    &:focus {
+      text-decoration: underline;
+      color: $t-light;
+      outline: none;
+    }
+  }
+}
+
+.welcome-banner-form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  padding: 40px 10px 0 10px;
+  transition: transform 2s;
+  transform: rotateY( 180deg );
+  text-align: center;
+  color: #fff;
+  background-color: rgba(28,31,41,.5);
+
+  backface-visibility: hidden; //скрывает контент оборота
+  &__title {
+    text-transform: uppercase;
+
+    @include font-size(35px);
+    @include sansus(regular);
+  }
+  &__list {
+    margin: 35px -10px 0 -10px;
+    padding: 0;
+
+    @include clearfix;
+  }
+  &__item {
+    position: relative;
+    float: left;
+    width: 50%;
+    list-style: none;
+    transition: all .5s;
+    border-right: 2px solid #7296d2;
+    background-color: $brand;
+    &:last-child {
+      border-right: none;
+    }
+    &:hover {
+      transition: all .5s;
+      background-color: $brand-dark;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 10px 5px;
+    text-decoration: none;
+    color: $t-light;
+
+    @include roboto(medium);
+    @include font-size(16px);
+    &:hover {
+      color: $t-light;
+    }
+    &:focus {
+      text-decoration: underline;
+      color: $t-light;
+      outline: none;
+    }
+  }
+}
+.welcome-banner-form__fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  input {
+    width: 100%;
+    outline: none;
+  }
+}
+
+.welcome-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  .copyright {
+    display: inline-block;
+    max-width: 1200px;
+    padding: 40px 10px;
+    color: #fff;
+
+    @include roboto(light);
+    @include font-size(16px);
+    span {
+      position: relative;
+      margin-right: 12px;
+      &:last-child {
+        margin-right: 0;
+        &:after {
+          display: none;
+        }
+      }
+      &:after {
+        position: absolute;
+        right: -11px;
+        bottom: 2px;
+        display: block;
+        width: 2px;
+        height: 14px;
+        margin: 0 4px;
+        content: '';
+        opacity: .7;
+        background-color: #fff;
+      }
     }
   }
 }

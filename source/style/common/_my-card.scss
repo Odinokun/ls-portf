@@ -1,7 +1,10 @@
 .my-card {
   text-align: center;
+
+  backface-visibility: hidden;
   &__img {
     position: relative;
+    z-index: 0; //нивелирует побочные свойства  backface-visibility
     display: inline-block;
     overflow: hidden;
     width: 140px;

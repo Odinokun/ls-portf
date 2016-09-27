@@ -1,7 +1,4 @@
-(function() {
-  'use strict';
-
-  setTimeout(function() {
-    document.querySelector('.greating_picture').classList.add('m--show');
-  }, 1000);
-})();
+// toggle class active in welcome-banner
+$('.welcome-btn').click(function() {
+    $('.welcome-banner__wrap').toggleClass('active');
+});
