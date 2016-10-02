@@ -8,8 +8,8 @@ block content
     section.container.welcome-container
       button.welcome-btn Авторизоваться
 
-      div.welcome-banner__wrap
-        div.welcome-banner
+      .welcome-banner__wrap
+        .welcome-banner
           include ../common/_my-card
           include ../common/_social-icons
           ul.welcome-banner__list
@@ -19,31 +19,37 @@ block content
               a(href="#").welcome-banner__link Обо мне
             li.welcome-banner__item.welcome-banner__item--blog
               a(href="#").welcome-banner__link Блог
-        div.welcome-banner-form
-          h2.welcome-banner-form__title Авторизируйтесь
+
+        .welcome-form
+          h2.welcome-form__title Авторизуйтесь
           form(action="")
-            fieldset.welcome-banner-form__fieldset
-              input(type="text")
-              input(type="password")
-            label Я человек
-              input(type="checkbox")
-            fieldset.welcome-banner-form__fieldset.checkbox
-              legend Вы точно не робот?
-                label Да
-                  input(type="radio")
-                label Не уверен
-                  input(type="radio")
-          ul.welcome-banner-form__list
-            li.welcome-banner-form__item
-              a(href="#").welcome-banner-form__link На главную
-            li.welcome-banner-form__item
-              a(href="#").welcome-banner-form__link Войти
+            fieldset.welcome-form__fieldset.input
+              .welcome-form__input--wrap
+                input.welcome-form__input.login(type="text", placeholder="Логин")
+              .welcome-form__input--wrap
+                input.welcome-form__input.password(type="password", placeholder="Пароль")
+
+            fieldset.welcome-form__fieldset.checkbox
+              input(type="checkbox").welcome-form__checkbox#human
+              label(for="human").welcome-form__checkbox--label Я человек
+
+            fieldset.welcome-form__fieldset.radio
+              legend.welcome-form__legend Вы точно не робот?
+              input(type="radio" name="urobot").welcome-form__radio#robot-yes
+              label(for="robot-yes").welcome-form__radio--label Да
+              input(type="radio" name="urobot").welcome-form__radio#robot-no
+              label(for="robot-no").welcome-form__radio--label Не уверен
+          ul.welcome-form__list
+            li.welcome-form__item
+              a(href="#").welcome-form__link На главную
+            li.welcome-form__item
+              a(href="#").welcome-form__link Войти
 
 
 
 
     footer.welcome-footer
-      div.copyright
+      .copyright
         span &#169; Дмитрий Гордиенко
         span создано с любовью в LoftSchool
         span 2016

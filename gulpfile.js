@@ -24,16 +24,15 @@ $.path.task.forEach(function(taskPath) {
 $.gulp.task('default', $.gulp.series(
   'clean',
   $.gulp.parallel(
-    'image:min'
-  ),
-  $.gulp.parallel(
     'sass',
     'pug',
     'js:foundation',
     'js:process',
     'copy:fonts',
     'css:foundation',
-    'sprite:svg'
+    'sprite:svg',
+    'sprite:png',
+    'image:min'
   ),
   $.gulp.parallel(
     'watch',
