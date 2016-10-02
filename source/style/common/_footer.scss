@@ -1,12 +1,13 @@
 .page-footer {
+  margin-top: -170px;
   background-color: rgba(0,0,0,.75);
 }
 .page-footer__list {
   text-align: right;
 }
 .page-footer__item {
-  text-align: left;
   display: inline-block;
+  text-align: left;
 }
 .page-footer__item.banner {
   position: absolute;
@@ -25,39 +26,37 @@
 }
 
 .page-footer__item.nav,
-  .page-footer__item.adress {
-    display: inline-block;
-    vertical-align: top;
-    border-left: 1px solid #9e9fa3;
-    padding-left: 30px;
-    margin-right: 150px;
-
-  }
+.page-footer__item.adress {
+  display: inline-block;
+  margin-right: 150px;
+  padding-left: 30px;
+  vertical-align: top;
+  border-left: 1px solid #9e9fa3;
+}
 
 .page-footer__item.nav {
   svg {
     fill: #9e9fa3;
     &:hover {
-
-    fill: $brand;
+      fill: $brand;
     }
   }
 }
 .footer-nav__list {
-  margin: 0 0 20px 0px;
+  margin: 0 0 20px 0;
   padding: 0;
 }
 .footer-nav__item {
-  list-style: none;
   display: inline-block;
   margin: 0 40px 0 0;
+  list-style: none;
 }
 .footer-nav__link {
-  color: #fff;
-  text-decoration: none;
   font-size: 16px;
-  @include roboto(bold);
+  text-decoration: none;
+  color: #fff;
 
+  @include roboto(bold);
 }
 
 .page-footer__item.adress {
@@ -72,8 +71,9 @@
 }
 .footer-adress__link {
   text-decoration: none;
-  color: #fff;
   opacity: .75;
+  color: #fff;
+
   @include roboto(light);
 }
 

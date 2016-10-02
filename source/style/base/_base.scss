@@ -52,11 +52,11 @@ p {
   @include roboto(regular);
 }
 a {
-  color: $brand-dark;
   transition: .5s;
+  color: $brand-dark;
   &:hover,
   &:focus {
-  transition: .5s;
+    transition: .5s;
     text-decoration: none;
     color: $brand;
   }
@@ -71,4 +71,7 @@ a {
   max-width: 1800px;
   margin: 0 auto;
   padding: 20px 30px;
+}
+.page-container {
+  padding-bottom: 170px;
 }
