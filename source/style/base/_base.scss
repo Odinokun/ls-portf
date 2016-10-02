@@ -53,8 +53,10 @@ p {
 }
 a {
   color: $brand-dark;
+  transition: .5s;
   &:hover,
   &:focus {
+  transition: .5s;
     text-decoration: none;
     color: $brand;
   }
