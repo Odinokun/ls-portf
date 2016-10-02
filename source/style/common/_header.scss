@@ -1,9 +1,22 @@
+.page-header__wrap {
+  position: relative;
+}
+.page-header__wrap.blog {
+  &.container {
+    min-height: 400px;
+  }
+}
+.page-header__wrap.about {
+  .page-header .container {
+    min-height: 550px;
+  }
+}
 .page-header {
   position: relative;
   text-align: center;
   background: #223b65 url('../img/bg-welcome.jpg') 50% 100%/cover no-repeat;
   .container {
-    min-height: 400px;
+    // min-height: 400px;
     padding: 30px 20px;
   }
 }
@@ -22,9 +35,8 @@
 }
 .page-header__ava {
   position: absolute;
-  top: -100px;
+  top: 100px;
   right: 0;
-  bottom: 0;
   left: 0;
   display: inline-block;
   overflow: hidden;
@@ -81,7 +93,7 @@
 
 .page-header__title--wrap {
   position: absolute;
-  top: 250px;
+  top: 260px;
   right: 0;
   left: 0;
   text-align: center;

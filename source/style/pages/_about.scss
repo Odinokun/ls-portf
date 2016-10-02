@@ -1,0 +1,249 @@
+.arr-down {
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+  left: 0;
+  width: 26px;
+  height: 20px;
+  margin: auto;
+  svg {
+    width: 100%;
+    height: 20px;
+    transition: .5s;
+
+    fill: #cbcace;
+  }
+  &:hover svg {
+    transition: .5s;
+
+    fill: $brand;
+  }
+}
+.arr-down__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  cursor: pointer;
+}
+
+.container.about {
+  @include clearfix;
+}
+
+.about-item__left,
+.about-item__right {
+  float: left;
+  width: 50%;
+}
+.about-left__header {
+  float: left;
+  width: 48%;
+  text-align: center;
+}
+.about-left__title {
+  font-size: 63px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #373e42;
+
+  @include sansus(regular);
+}
+.about-left__article {
+  float: right;
+  width: 50%;
+  margin-right: 2%;
+}
+.about-left__photo {
+  overflow: hidden;
+  width: 430px;
+  height: 390px;
+  margin-bottom: 30px;
+}
+.about-left__photo-img {
+  display: block;
+  width: 100%;
+}
+.about-left__article--title {
+  font-size: 35px;
+  line-height: 1;
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #373e42;
+
+  @include sansus(regular);
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 90px;
+    height: 3px;
+    margin: auto;
+    content: '';
+    background-color: #9c9d9f;
+  }
+}
+.about-left__article--text {
+  margin: 10px 0;
+}
+
+.about-right__header {
+  max-width: 300px;
+  margin: 0 auto;
+}
+.about-right__title {
+  font-size: 35px;
+  line-height: 1;
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #373e42;
+
+  @include sansus(regular);
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 90px;
+    height: 3px;
+    margin: auto;
+    content: '';
+    background-color: #9c9d9f;
+  }
+}
+
+
+.about-item__right {
+  padding-left: 40px;
+}
+.about-right__text {
+  margin-bottom: 50px;
+}
+.about-right__article {
+  margin-bottom: 30px;
+}
+.about-right__article--title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #474b57;
+
+  @include roboto(medium);
+}
+
+.about-right__article-skill {
+  display: inline-block;
+  margin-right: 40px;
+  vertical-align: top;
+}
+
+#map {
+  width: 100%;
+  height: 1100px;
+  margin-bottom: -150px;
+}
+
+.map-wrap {
+  position: relative;
+}
+.contact-banner__wrap {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 580px;
+  margin: auto;
+  &:after {
+    display: inline-block;
+    height: 100%;
+    content: '';
+    vertical-align: middle;
+  }
+}
+.contact-banner {
+  display: inline-block;
+  width: 575px;
+  padding: 20px;
+  vertical-align: middle;
+  background-color: rgba(255,255,255,.7);
+}
+.contact-banner__header--title {
+  font-size: 35px;
+  line-height: 1;
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #373e42;
+
+  @include sansus(regular);
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 90px;
+    height: 3px;
+    margin: auto;
+    content: '';
+    background-color: #9c9d9f;
+  }
+}
+
+.contact-banner__list {
+  margin: 0;
+  padding: 0;
+}
+.contact-banner__item {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+  vertical-align: top;
+}
+.contact-banner__link {
+  font-size: 16px;
+  position: relative;
+  z-index: 15;
+  display: inline-block;
+  width: 250px;
+  margin: 0 0 20px 10px;
+  padding: 12px 10px 12px 60px;
+  transition: .5s;
+  text-decoration: none;
+  color: #474b57;
+
+  @include roboto(medium);
+  &:hover {
+    transition: .5s;
+    color: $brand;
+    .contact-banner__svg {
+      transition: .5s;
+
+      fill: #9e9fa3;
+    }
+  }
+}
+.contact-banner__svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  transition: .5s;
+
+  fill: $brand;
+}
