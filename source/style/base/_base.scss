@@ -36,8 +36,6 @@ p {
   margin: 0;
   padding: 0;
 }
-
-
 h1,
 h2,
 h3,
@@ -54,8 +52,7 @@ p {
 a {
   transition: .5s;
   color: $brand-dark;
-  &:hover,
-  &:focus {
+  &:hover {
     transition: .5s;
     text-decoration: none;
     color: $brand;

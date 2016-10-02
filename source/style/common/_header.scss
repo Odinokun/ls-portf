@@ -2,7 +2,7 @@
   position: relative;
 }
 .page-header__wrap.blog {
-  &.container {
+  .page-header .container {
     min-height: 400px;
   }
 }
@@ -11,12 +11,26 @@
     min-height: 550px;
   }
 }
+.page-header__wrap.works {
+  .page-header .container {
+    min-height: 780px;
+  }
+  .triangle {
+    position: relative;
+    top: -180px;
+  }
+  .svg-triangle polygon {
+    fill: rgba(0,0,0,.7);
+  }
+  .arr-down {
+    bottom: 240px;
+  }
+}
 .page-header {
   position: relative;
   text-align: center;
   background: #223b65 url('../img/bg-welcome.jpg') 50% 100%/cover no-repeat;
   .container {
-    // min-height: 400px;
     padding: 30px 20px;
   }
 }
@@ -90,7 +104,6 @@
 .svg-triangle polygon {
   fill: #faf8f0;
 }
-
 .page-header__title--wrap {
   position: absolute;
   top: 260px;
@@ -112,4 +125,34 @@
 
   @include font-size(16px);
   @include roboto(regular);
+}
+.arr-down {
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+  left: 0;
+  width: 26px;
+  height: 20px;
+  margin: auto;
+  svg {
+    width: 100%;
+    height: 20px;
+    transition: .5s;
+
+    fill: #cbcace;
+  }
+  &:hover svg {
+    transition: .5s;
+
+    fill: $brand;
+  }
+}
+.arr-down__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  cursor: pointer;
 }

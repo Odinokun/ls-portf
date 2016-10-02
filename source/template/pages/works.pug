@@ -1,0 +1,68 @@
+extends ../_template
+
+block variables
+  - var title = 'Мои работы'
+
+block content
+  .wrapper
+    .page-header__wrap.works
+      include ../common/_header
+      .page-header__title--wrap
+        h2.my-card__title Дмитрий Гордиенко
+        p.my-card__subtitle Личный сайт веб разработчика
+      .arr-down
+        svg
+          use(xlink:href="assets/img/sprite.svg#arrow_down")
+        a.arr-down__link(href="#")
+    section.works-string
+      h1.works-string__title Мои работы
+
+    .container.page-container.works
+      section.works-left
+        article.works-left__banner
+          h2.works-left__title Сайт школы онлайн образования
+          h3.works-left__subtitle HTML, Css, JavaScript
+          a.works-left__link Посмотреть сайт
+            svg
+              use(xlink:href="assets/img/sprite.svg#link")
+
+      section.works-right
+        .temp-img-slider
+          img(src="assets/img/slider-temp.jpg", alt="slider")
+
+    section.reviews
+      .container
+        header.reviews-header
+          h2.revews-header__title Что обо мне говорят
+
+        section.reviews-article--wrap
+          article.reviews-article
+            .reviews-article__ava
+              img.reviews-article__img(src="assets/img/ava-k.jpg", alt="avatar")
+            blockquote.reviews-article__blockquote.
+              Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+            .signature
+              p.signature-name Ковальчук Дмитрий
+              p.signature-position - основатель Loftschool
+
+          article.reviews-article
+            .reviews-article__ava
+              img.reviews-article__img(src="assets/img/ava-z.jpg", alt="avatar")
+            blockquote.reviews-article__blockquote.
+              Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+            .signature
+              p.signature-name Зар Захаров
+              p.signature-position - преподаватель
+
+        .contact-form__wrap
+          header.contact-form__header
+            h2.contact-form__title Связаться со мной
+          form.contact-form
+            input.contact-form__input(type="text", placeholder="Ваше имя", name="name", required)
+            input.contact-form__input(type="mail", placeholder="Ваш email", name="email", required)
+            textarea.contact-form__textarea(type="text", placeholder="Ваше сообщение", name="message", rows="5")
+            span.contact-form__input--wrap
+              input.contact-form__submit(type="submit", value="Отправить")
+              input.contact-form__reset(type="reset", value="Очистить")
+
+  include ../common/_footer

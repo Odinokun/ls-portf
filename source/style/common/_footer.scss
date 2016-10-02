@@ -1,6 +1,6 @@
 .page-footer {
-  background-color: rgba(0,0,0,.75);
   z-index: 10;
+  background-color: rgba(0,0,0,.75);
 }
 .page-footer__list {
   text-align: right;
@@ -58,10 +58,6 @@
 
   @include roboto(bold);
 }
-
-.page-footer__item.adress {
-  // margin-left: 50px;
-}
 .footer-adress__list {
   margin: 0;
   padding: 0;
@@ -76,10 +72,6 @@
 
   @include roboto(light);
 }
-
-
-
-
 .page-footer__copyright {
   padding: 10px 0;
   text-align: center;

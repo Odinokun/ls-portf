@@ -1,0 +1,248 @@
+.container.works {
+  padding: 0;
+
+  @include clearfix;
+}
+.works-string {
+  position: relative;
+  height: 180px;
+  margin-top: -180px;
+  text-align: center;
+  background-color: rgba(0,0,0,.7);
+}
+.works-string__title {
+  font-size: 63px;
+  line-height: 180px;
+  text-transform: uppercase;
+  color: #fff;
+
+  @include sansus(regular);
+}
+.works-left {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 100%;
+  height: 750px;
+  text-align: center;
+  &:before {
+    display: inline-block;
+    height: 100%;
+    content: '';
+    vertical-align: middle;
+  }
+}
+.works-left__banner {
+  display: inline-block;
+  vertical-align: middle;
+}
+.works-left__title {
+  font-size: 35px;
+  line-height: 1;
+  position: relative;
+  max-width: 350px;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #373e42;
+
+  @include sansus(regular);
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 90px;
+    height: 3px;
+    margin: auto;
+    content: '';
+    background-color: #9c9d9f;
+  }
+}
+.works-left__subtitle {
+  font-size: 16px;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  color: $brand;
+
+  @include roboto(medium);
+}
+
+.works-left__link {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px 10px 50px;
+  cursor: pointer;
+  transition: .5s;
+  color: #fff;
+  border: 2px solid $brand;
+  background-color: $brand;
+  &:hover {
+    transition: .5s;
+    color: $brand;
+    background-color: transparent;
+    svg {
+      transition: .5s;
+
+      fill: $brand;
+    }
+  }
+  svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    transition: .5s;
+
+    fill: #fff;
+  }
+}
+
+.works-right {
+  float: right;
+  width: 50%;
+  height: 750px;
+  margin-right: -20px;
+}
+
+.reviews {
+  margin-bottom: -170px;
+  padding-bottom: 200px;
+  background: #000 url('../img/bg-review.jpg') 50% 100%/cover no-repeat;
+}
+.reviews-header {
+  margin-bottom: 20px;
+  padding: 40px 10px;
+  text-align: center;
+}
+.revews-header__title {
+  font-size: 63px;
+  line-height: 1;
+  max-width: 400px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  color: #fff;
+
+  @include sansus(regular);
+}
+.reviews-article--wrap {
+  max-width: 800px;
+  margin: 0 auto 65px;
+}
+.reviews-article {
+  display: inline-block;
+  width: 50%;
+  margin-right: -5px;
+  vertical-align: top;
+}
+.reviews-article__ava {
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+}
+.reviews-article__blockquote {
+  font-size: 16px;
+  margin: 10px 10px 30px 10px;
+  color: #fff;
+
+  @include roboto(italic);
+}
+.signature {
+  text-align: center;
+}
+.signature-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+
+  @include roboto(italic);
+}
+.signature-position {
+  font-size: 16px;
+  color: #fff;
+
+  @include roboto(italic);
+}
+
+.contact-form__wrap {
+  width: 380px;
+  margin: 0 auto 120px;
+  padding: 40px 20px;
+  background-color: rgba(255,255,255,.15);
+}
+.contact-form__title {
+  font-size: 35px;
+  line-height: 1;
+  position: relative;
+  max-width: 350px;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+
+  @include sansus(regular);
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 90px;
+    height: 3px;
+    margin: auto;
+    content: '';
+    background-color: #9c9d9f;
+  }
+}
+.contact-form__input,
+.contact-form__textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 15px;
+  color: #fff;
+  border: none;
+  background-color: rgba(255,255,255,.15);
+}
+.contact-form__input--wrap {
+  display: block;
+  margin: 10px -20px -40px -20px;
+
+  @include clearfix;
+}
+.contact-form__submit,
+.contact-form__reset {
+  float: left;
+  width: 50%;
+  padding: 10px 0;
+  border: none;
+
+  @include roboto(medium);
+}
+.contact-form__submit {
+  transition: .5s;
+  color: #fff;
+  border: 2px solid $brand;
+  background-color: $brand;
+  &:hover {
+    transition: .5s;
+    color: $brand;
+    background-color: #fff;
+  }
+}
+.contact-form__reset {
+  transition: .5s;
+  color: rgba(255,255,255,.3);
+  background-color: transparent;
+  &:hover {
+    transition: .5s;
+    color: $brand;
+  }
+}
